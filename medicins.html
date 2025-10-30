@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#2563eb',
+          secondary: '#10b981',
+          accent: '#009688',
+          background: '#FFFFFF',
+          text: '#333333',
+          alert: '#E53935',
+        },
+        fontFamily: {
+          heading: ['Montserrat', 'sans-serif'],
+          body: ['"Source Sans 3"', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+    <title>MediCare +</title>
+</head>
+
+<body>
+    <!--navbar-->
+   <header class="bg-gray-100 bg-opacity-80 backdrop-blur-md h-20 sticky top-0"><div class="flex pt-4 items-center justify-center gap-36 ">
+        <img src="ressources/medicare-logo.png" alt="website logo" class="w-36">
+        <nav class="flex bg-slate-200 px-5 py-2 rounded-3xl  bg-gray-50 items-center gap-8 font-heading text-base font-medium text-text">
+            <a href=""><div >Accueil</div></a>
+            <a href="medicins.html"><div class="bg-primary px-4 py-1 rounded-2xl text-white">Médecins</div></a>
+            <a href="rendez-vous.html"><div>Rendez-vous</div></a>
+        </nav>
+        <div class="flex">
+            <p class="font-heading font-semibold text-text pr-1">light</p>
+            <div class="flex items-center bg-primary w-12 rounded-xl px-1 ">
+                <div class="bg-white w-4 h-4 rounded-full "></div>
+            </div>
+            <p class="font-heading font-semibold text-text pl-1">dark</p>
+        </div>
+    </div></header>
+
+    <section class="flex flex-col justify-center items-center gap-4">
+        <h1 class=" pt-14 text-3xl font-heading font-semibold text-text w-[70vw] text-center">Nos Médecins</h1>
+        <p class="w-[70vw] text-center text-text font-medium font-body">Découvrez notre équipe de médecins experts et spécialistes</p>
+        <div class="flex items-center w-[70vw] h-8 bg-slate-200 rounded-2xl font-body text-slate-600 px-3">
+            <img class="w-4 mr-2" src="ressources/icons8-search-288(4).png" alt="search icon">
+            <input
+                id="search"
+                type="text"
+                placeholder="Rechercher un médecin..."
+                class="bg-transparent outline-none w-full placeholder-slate-400"
+            >
+        </div>
+        <!---cards container-->
+        <div class="mt-4">
+            <!--first card-->
+            <div class="flex border-4 w-[80vw] rounded-2xl h-32">
+                <div class="overflow-hidden w-[30vw] flex justify-center items-center ">
+                <img class="w-34 mt-4" src="ressources/cards/JohnStewart.jpg" alt="">
+                </div>
+                <div class="w-[70vw] pl-2">
+                    <p class="font-heading text-text">John Stewart</p>
+                    <p class="font-body text-sm">Expert care for neurological disorders using state-of-the-art technology and treatments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+<script src="JS/medicins.js"></script>
+</body>
+</html>
