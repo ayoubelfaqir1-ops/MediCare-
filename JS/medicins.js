@@ -13,21 +13,62 @@ menuButton.addEventListener('click',()=>{
 /*------------------search bar--------------*/
 // 1️⃣ Get the input element from the HTML
   const searchInput = document.getElementById('search');
+  const storedValue = localStorage.getItem('uservalue');
+if (storedValue) {
+  searchInput.value = storedValue;
+}
 
-  // 2️⃣ Listen for when the user types in the input
+  
+
+
+  const doctors_container = document.getElementById('doctors-container');
+  const cards = doctors_container.querySelectorAll('.doctor-card');
+  const noresults = document.getElementById('no-results');
+
   searchInput.addEventListener('input', () => {
-    
-    // 3️⃣ Save the text the user typed into localStorage
-    localStorage.setItem('searchValue', searchInput.value);
-    
-    // 4️⃣ Show it in the console (just for testing)
-    console.log(searchInput.value);
-  });
+    const tmp = searchInput.value.toLowerCase().trim();;
+    localStorage.setItem('searchvalue',tmp);
 
-  // 5️⃣ When the page loads, get the saved value
-  const storedValue = localStorage.getItem('searchValue');
+    let found = false;
 
-  // 6️⃣ If something was stored before, show it back in the input
-  if (storedValue) {
-    searchInput.value = storedValue;
+    cards.forEach(card => {
+      const name = card.querySelector('.doctor-name').textContent.toLowerCase();
+      if (name.includes(tmp)) {
+        card.classList.remove('hidden');
+        found=true;
+      }else {
+        card.classList.add('hidden');
+      }
+    });
+    noresults.classList.toggle('hidden',found);
+  })
+  
+  function external() {
+  const test = localStorage.getItem('uservalue'); // ✅ get saved search value
+
+  if (test !== null) { // ✅ check if something exists
+    let found = false; // ✅ declare found variable
+    const tmp = test.toLowerCase().trim(); // ✅ prepare value for comparison
+
+    cards.forEach(card => {
+      const nameElement = card.querySelector('.doctor-name');
+      if (!nameElement) return; // ✅ avoid null errors
+
+      const name = nameElement.textContent.toLowerCase();
+
+      if (name.includes(tmp)) {
+        card.classList.remove('hidden');
+        found = true;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    // ✅ toggle “no results” message
+    noresults.classList.toggle('hidden', found);
   }
+}
+window.addEventListener('load', external);
+  
+  
+  

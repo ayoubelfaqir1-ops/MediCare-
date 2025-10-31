@@ -68,7 +68,15 @@
     <section class="flex flex-col items-center gap-6 bg-blue-50">
         
 
-        <h1 class=" pt-14 text-3xl font-heading font-semibold text-text w-[70vw] text-center">Prenez soin de votre santé, simplement et en ligne.</h1>
+        <h1 class=" pt-14 tex/*-----------menuburger------------------*/
+
+const menuButton = document.getElementById('menubutton');
+const menulist = document.getElementById('menu');
+
+menuButton.addEventListener('click',()=>{
+    menulist.classList.toggle('hidden');
+});
+t-3xl font-heading font-semibold text-text w-[70vw] text-center">Prenez soin de votre santé, simplement et en ligne.</h1>
         <p class="w-[45vw] text-center text-text font-medium font-body">Votre santé est notre priorité. Prenez rendez-vous avec nos médecins experts et suivez votre santé en toute simplicité.</p>
         <!--searchbar-->
         <div class="flex items-center w-[70vw] h-8 bg-slate-200 rounded-2xl font-body text-slate-600 px-3">
@@ -82,9 +90,10 @@
         </div>
         <!---recherchce and nos medcins buttons-->
         <div class="flex justify-center items-center gap-8">
-            <button class=" bg-primary w-[120px] rounded-2xl h-8 text-white font-heading font-semibold">Rechercher</button>
-            <button class="flex justify-center items-center border-2 border-secondary gap-2 w-40 rounded-2xl h-8 text-secondary font-heading font-semibold"><img src="ressources/icons8-persons-96(1).png" alt="" class="w-5 ">Nos médecin</button>
+            <button id="recherche" class=" bg-primary w-[120px] rounded-2xl h-8 text-white font-heading font-semibold">Rechercher</button></a>
+            <a href="medicins.html"><button class="flex justify-center items-center border-2 border-secondary gap-2 w-40 rounded-2xl h-8 text-secondary font-heading font-semibold"><img src="ressources/icons8-persons-96(1).png" alt="" class="w-5 " >Nos médecin</button></a>
         </div>
+        
         
         <div class="flex gap-3">
             <div class="flex flex-col gap-2 justify-center items-center w-60 h-40 rounded-lg shadow-lg hover:shadow-blue-300 bg-white border-1 ">

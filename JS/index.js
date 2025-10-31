@@ -65,3 +65,12 @@
         }
         showslide(currentindex);
     },5000);
+
+
+    const userclick = document.getElementById('recherche');
+    const userinput = document.getElementById('search');
+    userclick.addEventListener('click',()=>{
+        const temp = userinput.value;
+        localStorage.setItem('uservalue',temp);
+         window.location.href = 'medicins.html';
+    })
