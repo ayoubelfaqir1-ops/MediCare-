@@ -32,11 +32,12 @@
     <title>MediCare +</title>
 </head>
 <body>
-<header class="flex justify-center items-center bg-gray-200 bg-opacity-75 backdrop-blur-md h-20 sticky top-0"><div class="flex items-center justify-center gap-36 ">
+<!--navbar-->
+   <header class="flex justify-center items-center bg-gray-200 bg-opacity-75 backdrop-blur-md h-16 lg:h-20 sticky top-0 z-10 "><div class="flex items-center justify-center gap-[40vw] md:gap-[50vw] lg:gap-36 ">
         <img src="ressources/medicare-logo.png" alt="website logo" class="w-32 lg:w-36">
         <nav class="flex bg-slate-200 px-5 py-2 rounded-3xl  bg-gray-50 items-center gap-8 font-heading text-base font-medium text-text hidden lg:flex">
-            <a href=""><div class="bg-primary px-4 py-1 rounded-2xl text-white" >Accueil</div></a>
-            <a href="medicins.html"><div>Médecins</div></a>
+            <a href="index.html"><div class="bg-primary px-4 py-1 rounded-2xl text-white">Accueil</div></a>
+            <a href="medicins.html"><div >Médecins</div></a>
             <a href="rendez-vous.html"><div>Rendez-vous</div></a>
         </nav>
         <div class="hidden lg:flex">
@@ -46,7 +47,7 @@
             </div>
             <p class="font-heading font-semibold text-text pl-1">dark</p>
         </div>
-        <div class="flex justify-center items-center gap-6 lg:hidden ">
+        <div class="flex justify-center items-center gap-6 lg:hidden">
             <!---light dark mode-->
             <div class="flex justify-center items-center w-12 h-12 hover:bg-blue-800 rounded-xl hidden lg:hidden">
                 <img class="w-5 invert brightness-0" src="ressources/brightness.png" alt="">
@@ -60,23 +61,21 @@
             </div>
         
         </div>
+        
+
     </div></header>
 
 
 
     
     <section class="flex flex-col items-center gap-6 bg-blue-50">
-        
+         <div id="menu" class="flex flex-col justify-center items-center gap-4 font-heading text-xl font-medium text-text fixed top-16 w-full bg-gray-200  hidden">
+            <a href="index.html"><div class="text-primary">Accueil</div></a>
+            <a href="medicins.html"><div >Médecins</div></a>
+            <a href="rendez-vous.html"><div class="pb-2">Rendez-vous</div></a>
+        </div>
 
-        <h1 class=" pt-14 tex/*-----------menuburger------------------*/
-
-const menuButton = document.getElementById('menubutton');
-const menulist = document.getElementById('menu');
-
-menuButton.addEventListener('click',()=>{
-    menulist.classList.toggle('hidden');
-});
-t-3xl font-heading font-semibold text-text w-[70vw] text-center">Prenez soin de votre santé, simplement et en ligne.</h1>
+        <h1 class=" pt-14 text-3xl font-heading font-semibold text-text w-[70vw] text-center">Prenez soin de votre santé, simplement et en ligne.</h1>
         <p class="w-[45vw] text-center text-text font-medium font-body">Votre santé est notre priorité. Prenez rendez-vous avec nos médecins experts et suivez votre santé en toute simplicité.</p>
         <!--searchbar-->
         <div class="flex items-center w-[70vw] h-8 bg-slate-200 rounded-2xl font-body text-slate-600 px-3">
@@ -94,9 +93,9 @@ t-3xl font-heading font-semibold text-text w-[70vw] text-center">Prenez soin de 
             <a href="medicins.html"><button class="flex justify-center items-center border-2 border-secondary gap-2 w-40 rounded-2xl h-8 text-secondary font-heading font-semibold"><img src="ressources/icons8-persons-96(1).png" alt="" class="w-5 " >Nos médecin</button></a>
         </div>
         
-        
+        <!---general info-->
         <div class="flex gap-3">
-            <div class="flex flex-col gap-2 justify-center items-center w-60 h-40 rounded-lg shadow-lg hover:shadow-blue-300 bg-white border-1 ">
+            <div class="flex flex-col gap-2 justify-center items-center w-[40vw] md:w-60 md:h-40 rounded-lg shadow-lg hover:shadow-blue-300 bg-white border-1 ">
                 <div class="flex w-12 h-12 rounded-full bg-blue-500/25 justify-center items-center ">
                 <img class="w-6 pt-1" src="ressources/blocks/heart.png" alt="">
                 </div>
@@ -104,7 +103,7 @@ t-3xl font-heading font-semibold text-text w-[70vw] text-center">Prenez soin de 
                 <p class="font-body text-text">Patients Satisfaits</p>
             </div>
 
-            <div class="flex flex-col gap-2 justify-center items-center w-60 h-40 rounded-lg shadow-lg hover:shadow-grreen-300 bg-white hover:shadow-green-300 border-1 ">
+            <div class="flex flex-col gap-2 justify-center items-center w-[40vw] md:w-60 md:h-40 rounded-lg shadow-lg hover:shadow-grreen-300 bg-white hover:shadow-green-300 border-1 ">
                 <div class="flex w-12 h-12 rounded-full bg-green-500/25 justify-center items-center ">
                 <img class="w-8" src="ressources/icons8-persons-96(1).png" alt="">
                 </div>
@@ -112,7 +111,7 @@ t-3xl font-heading font-semibold text-text w-[70vw] text-center">Prenez soin de 
                 <p class="font-body text-text">Médecins Experts</p>
             </div>
 
-            <div class="flex flex-col gap-2 justify-center items-center w-60 h-40 rounded-lg shadow-lg bg-white hover:shadow-blue-300 border-1 ">
+            <div class="flex flex-col gap-2 justify-center items-center w-[40vw] md:w-60 md:h-40 rounded-lg shadow-lg bg-white hover:shadow-blue-300 border-1 hidden md:flex ">
                 <div class="flex w-12 h-12 rounded-full bg-blue-500/25 justify-center items-center ">
                 <img class="w-6 " src="ressources/blocks/date.png" alt="">
                 </div>
@@ -120,7 +119,7 @@ t-3xl font-heading font-semibold text-text w-[70vw] text-center">Prenez soin de 
                 <p class="font-body text-text">Rendez-vous/Mois</p>
             </div>
 
-            <div class="flex flex-col gap-2 justify-center items-center w-60 h-40 rounded-lg shadow-lg hover:shadow-green-300 bg-white border-1 ">
+            <div class="flex flex-col gap-2 justify-center items-center w-[40vw] md:w-60 md:h-40 rounded-lg shadow-lg hover:shadow-green-300 bg-white border-1 hidden lg:flex ">
                 <div class="flex w-12 h-12 rounded-full bg-green-500/25 justify-center items-center ">
                 <img class="w-8" src="ressources/blocks/award-ribbon(1).png" alt="">
                 </div>
@@ -128,19 +127,19 @@ t-3xl font-heading font-semibold text-text w-[70vw] text-center">Prenez soin de 
                 <p class="font-body text-text">Années d'Expérience</p>
             </div>
         </div>
-
-        <div class="flex justify-between items-center px-3 bg-gradient-to-r from-primary  via-cyan-600 to-green-500 w-[70vw] h-32 rounded-xl">
-            <img id="left1" class="w-5 h-9 cursor-pointer " src="ressources/fleft.png" alt="a gouche">
-            <div class="flex items-center gap-4 flex-1 pl-4">
-            <div class="flex w-20 h-20 rounded-full bg-blue-400/75 justify-center items-center shadow-lg">
+            <!----carosel----->
+        <div class="flex justify-between items-center px-3 bg-gradient-to-r from-primary  via-cyan-600 to-green-500 w-[90vw] h-20 md:w-[70vw] md:h-28 rounded-xl mb-4">
+            <img id="left1" class="w-3 h-6 md:w-5 md:h-9 cursor-pointer " src="ressources/fleft.png" alt="a gouche">
+            <div class="flex items-center gap-2 md:gap-4 flex-1 pl-4">
+            <div class="flex w-12 h-12 md:w-20 md:h-20 rounded-full bg-blue-400/75 justify-center items-center shadow-lg">
             <img id="image" class="w-14" src="ressources/carousel/brain.png" alt="">
             </div>
             <div>
-                <h2 id="title" class="text-2xl font-heading text-white font-semibold">Gestion du Stress</h2>
-                <p id="paragraph" class="text-base text-white font-body">Pratiquez la méditation ou le yoga pour réduire le stress et améliorer votre bien-être.</p>
+                <h2 id="title" class="text-base font-heading text-white font-semibold">Gestion du Stress</h2>
+                <p id="paragraph" class="text-sm text-white font-body">Pratiquez la méditation ou le yoga pour réduire le stress et améliorer votre bien-être.</p>
             </div>
             </div>
-            <img id="right1" class="w-5 h-9 cursor-pointer" src="ressources/fright.png" alt="a droite">
+            <img id="right1" class="w-3 h-6 md:w-5 md:h-9 cursor-pointer" src="ressources/fright.png" alt="a droite">
         </div>
     </section>
 

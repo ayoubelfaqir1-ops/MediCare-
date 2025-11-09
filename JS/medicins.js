@@ -71,4 +71,3 @@ if (storedValue) {
 window.addEventListener('load', external);
   
   
-  

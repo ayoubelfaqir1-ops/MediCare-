@@ -1,5 +1,17 @@
 
-  // 1️⃣ Get the input element from the HTML
+ /*-----------menuburger------------------*/
+
+const menuButton = document.getElementById('menubutton');
+const menulist = document.getElementById('menu');
+
+menuButton.addEventListener('click',()=>{
+    menulist.classList.toggle('hidden');
+});
+
+
+
+
+ // 1️⃣ Get the input element from the HTML
   const searchInput = document.getElementById('search');
 
   // 2️⃣ Listen for when the user types in the input
