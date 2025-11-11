@@ -88,17 +88,17 @@
                 <!---Nom complet-->
                 <div class="flex flex-col w-[80vw] md:w-[80%] lg:w-[80%]">
                 <label for="text" class="text-text font-body font-medium">Nom complet *</label>
-                <input class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="text" placeholder="John semit">
+                <input id="name" class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="text" placeholder="John semit">
                 </div>
                 <!---Email-->
                 <div class="flex flex-col w-[80vw] md:w-[80%] lg:w-[80%]">
                 <label for="text" class="text-text font-body font-medium">Email *</label>
-                <input class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="text" placeholder="Email">
+                <input id="email" class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="text" placeholder="Email">
                 </div>
                 <!---telephone-->
                 <div class="flex flex-col w-[80vw] md:w-[80%] lg:w-[80%]">
                 <label for="number" class="text-text font-body font-medium">Téléphone *</label>
-                <input class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="number" placeholder="06 24 51 68 79">
+                <input id="telephone" class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="number" placeholder="06 24 51 68 79">
                 </div>
                 <!--choisis doctor-->
                 <div id="medicins_input" class="flex items-center w-[80vw] md:w-[80%] lg:w-[80%] h-7 rounded-lg  border border-gray-300 cursor-pointer mt-2 ">
@@ -128,19 +128,19 @@
                 <!---date-->
                 <div class="flex flex-col w-[80vw] md:w-[80%] lg:w-[80%]">
                 <label for="date" class="text-text font-body font-medium">Date *</label>
-                <input class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="date" placeholder="">
+                <input id="date" class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="date" placeholder="">
                 </div>
                 <!--time-->
                 <div class="flex flex-col w-[80vw] md:w-[80%] lg:w-[80%]">
                 <label for="time" class="text-text font-body font-medium">Time *</label>
-                <input class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="datetime" placeholder="">
+                <input id="time" class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500 " type="datetime" placeholder="hh:mm">
                 </div>
                 <!---Reaison de consultation--->
                 <div class="flex flex-col w-[80vw] md:w-[80%] lg:w-[80%]">
                 <label for="text" class="text-text font-body font-medium">Email *</label>
-                <textarea class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500  " rows="3" placeholder="Décrivez briévement la raison de votre visite..."></textarea>
+                <textarea id="raison" class="border border-gray-300 rounded-lg pl-2 placeholder-gray-500  " rows="3" placeholder="Décrivez briévement la raison de votre visite..."></textarea>
                 </div>
-                <button class="bg-primary  text-white font-heading px-8 py-1 text-xl rounded-3xl mb-4 mt-2">Confirmer</button>
+                <button id="submit" class="bg-primary text-white font-heading px-8 py-1 text-xl rounded-3xl mb-4 mt-2">Confirmer</button>
 
             </div>
             <!---rendez vous historique--->
